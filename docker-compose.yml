@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  ym_sonos:
+    restart: always
+    image: vmedinskiy/ym_sonos:latest
+    ports:
+      - 8141:8141
+    environment:
+      TOKEN_YM: "love"
+    command: ["/python ./main.py > /dev/null"]
